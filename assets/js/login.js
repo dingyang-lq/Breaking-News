@@ -52,7 +52,6 @@ $(function () {
           return layer.msg(res.message)
         }
         layer.msg('注册成功，请登录！')
-        // 模拟人的点击行为
         $('#link_login').click()
       })
     })
@@ -67,10 +66,8 @@ $(function () {
           return layer.msg('登录失败！')
         }
         layer.msg('登录成功！')
-        // 将登录成功得到的 token 字符串，保存到 localStorage 中
         localStorage.setItem('token', res.token)
-        // 跳转到后台主页
-        location.href = '/index.html'
+        location.href="/index.html"
       }
     })
   })
